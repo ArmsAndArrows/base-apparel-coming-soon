@@ -1,0 +1,234 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  line-height: 0;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.6rem;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-image: url(../images/bg-pattern-desktop.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  place-content: center;
+}
+@media only screen and (min-width: 25em) {
+  .container {
+    padding: 0 6rem;
+  }
+}
+@media only screen and (min-width: 43.75em) {
+  .container {
+    padding: 0 0;
+    grid-template-columns: 1fr minmax(min-content, 1fr);
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 93.75em) {
+  .container {
+    padding: 0 20rem;
+  }
+}
+
+.logo {
+  display: grid;
+  align-self: center;
+  padding: 3.3rem 5rem;
+}
+@media only screen and (min-width: 56.25em) {
+  .logo {
+    padding: 0 15rem;
+  }
+}
+.logo img {
+  width: 10rem;
+}
+@media only screen and (min-width: 93.75em) {
+  .logo img {
+    width: 15rem;
+  }
+}
+
+.hero-img {
+  justify-self: center;
+}
+@media only screen and (min-width: 43.75em) {
+  .hero-img {
+    grid-column: 2/3;
+    align-self: center;
+    grid-row: 1/3;
+    justify-self: end;
+  }
+}
+
+.content {
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  margin-top: 6rem;
+  line-height: 1.1;
+  padding: 0;
+}
+@media only screen and (min-width: 43.75em) {
+  .content {
+    margin-top: 0;
+    align-self: start;
+    justify-self: center;
+  }
+}
+@media only screen and (min-width: 56.25em) {
+  .content {
+    padding: 0 15rem;
+  }
+}
+.content__heading {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1rem;
+  text-align: center;
+}
+@media only screen and (min-width: 25em) {
+  .content__heading {
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 93.75em) {
+  .content__heading {
+    font-size: 5rem;
+  }
+}
+.content__heading--first-words {
+  font-weight: 300;
+  color: hsl(0, 36%, 70%);
+}
+.content__paragraph {
+  font-size: 1.4rem;
+  padding-top: 1.5rem;
+  color: hsl(0, 36%, 70%);
+  letter-spacing: 0.01rem;
+  line-height: 1.6;
+  text-align: center;
+}
+@media only screen and (min-width: 25em) {
+  .content__paragraph {
+    text-align: left;
+  }
+}
+.content__cta-form {
+  margin-top: 4rem;
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 1fr min-content;
+}
+.content__cta-form .errmessage {
+  justify-self: start;
+  margin-left: 2.5rem;
+  margin-top: 1rem;
+  color: hsl(0, 93%, 68%);
+  display: none;
+}
+.content__cta-form .emptymessage {
+  justify-self: start;
+  margin-left: 2.5rem;
+  margin-top: 1rem;
+  color: hsl(0, 93%, 68%);
+  display: none;
+}
+.content__cta-form .err-icon {
+  position: absolute;
+  right: 9rem;
+  top: 15%;
+  display: none;
+}
+.content__cta-form input {
+  padding: 1.5rem 2.5rem;
+  height: 100%;
+  border: 1px solid rgba(196, 173, 173, 0.603);
+  border-radius: 3rem;
+  width: 99%;
+  grid-column: 1/3;
+  grid-row: 1/-1;
+  transition: all 0.2s;
+}
+.content__cta-form input:focus {
+  outline: none !important;
+  border: 1px solid rgb(196, 173, 173);
+}
+.content__cta-form input::placeholder {
+  color: hsl(0, 36%, 70%);
+  opacity: 0.6;
+  font-size: 1.3rem;
+}
+.content__cta-form button {
+  grid-row: 1/2;
+  position: absolute;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  padding: 1.5rem 3rem;
+  right: 0;
+  border-radius: 3rem;
+  transition: all 0.5s;
+}
+.content__cta-form button:hover, .content__cta-form button:active {
+  background-image: linear-gradient(135deg, hsl(0, 100%, 93%), hsl(0, 93%, 83%));
+  transform: scale(1.1);
+}
+.content__cta-form button:active {
+  transform: scale(1);
+}
+.content__cta-form button img {
+  height: 2rem;
+}
+
+/*# sourceMappingURL=style.css.map */
